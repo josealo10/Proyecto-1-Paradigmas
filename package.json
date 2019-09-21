@@ -1,0 +1,30 @@
+{
+    "name": "Proyecto-1-Paradigmas",
+    "version": "1.0.0",
+    "description": "Proyecto Paradigmas de Programación II ciclo 2019",
+    "main": "index.js",
+    "scripts": {
+        "start": "node src/app.js",
+        "dev": "nodemon src/app.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/josealo10/Proyecto-1-Paradigmas.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/josealo10/Proyecto-1-Paradigmas/issues"
+    },
+    "homepage": "https://github.com/josealo10/Proyecto-1-Paradigmas#readme",
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "ejs": "^2.7.1",
+        "express": "^4.17.1",
+        "rivescript": "^2.0.0"
+    },
+    "devDependencies": {
+        "nodemon": "^1.19.2"
+    }
+}
