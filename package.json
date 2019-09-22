@@ -2,7 +2,7 @@
     "name": "Proyecto-1-Paradigmas",
     "version": "1.0.0",
     "description": "Proyecto Paradigmas de Programación II ciclo 2019",
-    "main": "index.js",
+    "main": "app.js",
     "scripts": {
         "start": "node src/app.js",
         "dev": "nodemon src/app.js"
