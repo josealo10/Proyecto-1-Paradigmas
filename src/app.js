@@ -1,6 +1,8 @@
 const express = require("express"),
     path = require("path"),
     bodyParser = require("body-parser"),
+    favicon = require("serve-favicon"),
+    morgan = require("morgan"),
     RiveScript = require("rivescript")
 
 const app = express()
@@ -13,11 +15,13 @@ app.set("views", path.join(__dirname, "views"))
 app.set("view engine", "ejs")
 
 // middlewaress
+app.use(morgan("dev"))
 app.use(bodyParser.urlencoded({ extended: false }))
+app.use(favicon(path.join(__dirname, "images", "logo.ico")))
 app.use(bodyParser.json())
 
 // routes
-app.use('/',require('./routes/index'))
+app.use('/', require('./routes/index'))
 
 // rivescript
 const bot = new RiveScript()
