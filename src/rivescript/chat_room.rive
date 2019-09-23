@@ -1,8 +1,9 @@
 + *
 - I do not have an answer for that
-- I do not have a answer for that, but i could tell you a joke instead!
-- I do not have a answer for that, why dont you tell me something about yourself
-- I do not have a answer for that, but i could tell you something interesting instead!
+- I do not have an answer for that, but i could tell you a joke instead!
+- I do not have an answer for that, why dont you tell me something about yourself
+- I do not have an answer for that, but i could tell you something interesting instead!
+- I do not have an answer for that, but i could help you search for products online!
 - Ask me something else
 
 
@@ -80,3 +81,31 @@
 - I know someone else that is studying <star1> too!!
 - Nice, in which University are you studying <star1>?
 - I think that <star1> is a great choice!!
+
+
++ universidad *
+- <star1> is a great University
+- I know someone that studies at <star1> too!!!
+- <star1> is really far away!!
+- Glad for you!!
+
+
++ i am (fine|great|good)
+- Glad to hear that!!
+- I am <star1> too!!
+- Good for you!!
+- Great, lets search for something online
+
+
++ i am (sad|not felling good)
+- I am sorry for you
+- I could tell you a joke to cheer you up
+- I am <star1> too!
+- Lets talk about something else, why dont you search for something online
+
+
++ search _
+- You could find <star> at http://google.com/search?q=<star>
+- Interesting...
+- You could find <star> at https://www.amazon.com/s?k=c<star>
+- I am surprised that you are looking for <star>
