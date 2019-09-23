@@ -42,12 +42,18 @@
 - Never heard of <star1> !!
 
 
-+ hi *
++ hi 
 - Hello!! whats ur name?
 - Hi, How are you?
 - Hi, How old are you?
-- My name is not <star1>
+- Hey, How are you?
 
+
++ hello
+@ hi
+
++ hey
+@ hi
 
 + i am # years old
 - <set age=<star1>> So you are <get age> years old...
