@@ -16,12 +16,21 @@ app.set("view engine", "ejs")
 
 // middlewaress
 app.use(morgan("dev"))
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({ extended: true }))
 app.use(favicon(path.join(__dirname, "images", "logo.ico")))
 app.use(bodyParser.json())
 
 // routes
 app.use('/', require('./routes/index'))
+
+app.post('/send', (req, res) => {
+    let msg = req.body
+    console.log("Client message: " + msg.msg)
+
+    reply(msg, (bot_resp) => {
+        res.send(bot_resp)
+    })
+})
 
 // rivescript
 const bot = new RiveScript()

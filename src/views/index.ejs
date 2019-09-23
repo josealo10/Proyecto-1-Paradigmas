@@ -86,42 +86,59 @@
             msg_history.appendChild(outgoin_msg)
 
             //last_message.textContent = message.value
-            message.value = ""
+            //message.value = ""
 
             reciveMessage()
         }
     }
 
     function reciveMessage() {
-        let message = "incomig message"
-        let msg_history = document.getElementById("msg_history")
-        let last_message = document.getElementById("last_message")
+        userMessage = document.getElementById("write_msg").value
+        let messageObject = {
+            msg: userMessage
+        }
 
-        let incoming_msg = document.createElement("div")
-        let incoming_msg_img = document.createElement("div")
-        let received_msg = document.createElement("div")
-        let received_withd_msg = document.createElement("div")
-        let p = document.createElement("p")
-        let span = document.createElement("span")
-        let time = new Date()
+        $.ajax({
+            type: "POST",
+            contentType: "application/json",
+            data: JSON.stringify(messageObject),
+            url: "/send"
 
-        incoming_msg.className += "incoming_msg"
-        incoming_msg_img.className += "incoming_msg_img"
-        received_msg.className += "received_msg"
-        received_withd_msg.className += "received_withd_msg"
-        span.className += "time_date"
+        }).done((bot_resp) => {
+            let message = bot_resp
+            let msg_history = document.getElementById("msg_history")
+            let last_message = document.getElementById("last_message")
 
-        span.textContent = time.getHours() + ":" + time.getMinutes()
-        p.textContent = message
+            let incoming_msg = document.createElement("div")
+            let incoming_msg_img = document.createElement("div")
+            let received_msg = document.createElement("div")
+            let received_withd_msg = document.createElement("div")
+            let p = document.createElement("p")
+            let span = document.createElement("span")
+            let time = new Date()
 
-        received_withd_msg.appendChild(p)
-        received_withd_msg.appendChild(span)
-        received_msg.appendChild(received_withd_msg)
-        incoming_msg.appendChild(incoming_msg_img)
-        incoming_msg.appendChild(received_msg)
-        msg_history.appendChild(incoming_msg)
+            incoming_msg.className += "incoming_msg"
+            incoming_msg_img.className += "incoming_msg_img"
+            received_msg.className += "received_msg"
+            received_withd_msg.className += "received_withd_msg"
+            span.className += "time_date"
 
-        //last_message.textContent = message
+            span.textContent = time.getHours() + ":" + time.getMinutes()
+            p.textContent = message
+
+            received_withd_msg.appendChild(p)
+            received_withd_msg.appendChild(span)
+            received_msg.appendChild(received_withd_msg)
+            incoming_msg.appendChild(incoming_msg_img)
+            incoming_msg.appendChild(received_msg)
+            msg_history.appendChild(incoming_msg)
+
+            //last_message.textContent = message
+
+            document.getElementById("write_msg").value = ""
+        })
+
+
     }
 </script>
 
