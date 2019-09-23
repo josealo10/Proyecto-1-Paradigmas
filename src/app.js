@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 // routes
-
+app.use('/',require('./routes/index'))
 
 // rivescript
 const bot = new RiveScript()

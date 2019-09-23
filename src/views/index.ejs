@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <% include head %>  
+    <link href="../css/chat.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+    <h3 class=" text-center">BOT CHAT</h3>
+    <div class="messaging">
+          <div class="inbox_msg">
+            <div class="inbox_people">
+              <div class="headind_srch">
+                <div class="recent_heading">
+                  <h4>Recent</h4>
+                </div>
+                <div class="srch_bar">
+                  <div class="stylish-input-group">
+                    <input type="text" class="search-bar"  placeholder="Search" >
+                    <span class="input-group-addon">
+                    <button type="button"> <i class="fa fa-search" aria-hidden="true"></i> </button>
+                    </span> </div>
+                </div>
+              </div>
+              <div class="inbox_chat">
+                <div class="chat_list active_chat">
+                  <div class="chat_people">
+                    <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                    <div class="chat_ib">
+                      <h5>Bot chat <span class="chat_date">Dec 25</span></h5>
+                      <p id = last_message></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mesgs">
+              <div class="msg_history" id="msg_history">
+                
+              </div>
+              <div class="type_msg">
+                <div class="input_msg_write">
+                  <input type="text" class="write_msg" placeholder="Type a message" id = "write_msg"/>
+                  <button class="msg_send_btn" type="button" onclick="sendMessage()"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>         
+        </div></div>
+        </body>
+
+
+        <script>
+            
+            document.onkeyup = function(event){
+                if(event.keyCode == 13){
+                    sendMessage()
+                }
+            }
+
+            function sendMessage(){
+                var message = document.getElementById("write_msg")
+                var msg_history = document.getElementById("msg_history")
+                var last_message = document.getElementById("last_message")
+
+                if(message.value != ""){
+                    var outgoin_msg = document.createElement("div")                
+                    var sent_msg = document.createElement("div")                
+                    var p = document.createElement("p")                
+                    var span = document.createElement("span")
+                    var time = new Date()
+
+                    outgoin_msg.className += "outgoin_msg"
+                    sent_msg.className += "sent_msg"                
+                    span.className = "time_date"
+
+                    span.textContent = time.getHours()+":"+time.getMinutes()
+                    p.textContent = message.value
+
+                    sent_msg.appendChild(p)
+                    sent_msg.appendChild(span)
+                    outgoin_msg.appendChild(sent_msg)
+                    msg_history.appendChild(outgoin_msg)
+
+                    last_message.textContent = message.value
+                    message.value = ""
+
+                    reciveMessage()
+                }
+            }
+
+            function reciveMessage(){
+                var message = "incomig message"
+                var msg_history = document.getElementById("msg_history")
+                var last_message = document.getElementById("last_message")
+
+                var incoming_msg = document.createElement("div")
+                var incoming_msg_img = document.createElement("div")
+                var received_msg = document.createElement("div")
+                var received_withd_msg = document.createElement("div")
+                var p = document.createElement("p")                
+                var span = document.createElement("span")
+                var time = new Date()
+
+                incoming_msg.className += "incoming_msg"
+                incoming_msg_img.className += "incoming_msg_img"
+                received_msg.className += "received_msg"
+                received_withd_msg.className += "received_withd_msg"
+                span.className += "time_date"
+
+                span.textContent = time.getHours()+":"+time.getMinutes()
+                p.textContent = message
+
+                received_withd_msg.appendChild(p)
+                received_withd_msg.appendChild(span)
+                received_msg.appendChild(received_withd_msg)
+                incoming_msg.appendChild(incoming_msg_img)
+                incoming_msg.appendChild(received_msg)
+                msg_history.appendChild(incoming_msg)
+
+                last_message.textContent = message
+            }
+
+            
+
+        </script>
+</html>
