@@ -1,36 +1,117 @@
-+ how are you [*]
-- I'm great, how are you?
-- I'm good, you?
-- Good :) you?
-- Great! You?
-- I'm fine, thanks for asking!
-
-+ * (anybody|there) [*]
-- Yeap me
-- Yes I'm here
-- Right here
-
-+ how old are you
-- Hmm...Why?
-- You know
-- Age doesn't matter
-
-+ * alone[*]
-- what have you in mind?
-- one is always alone
-- Are you?
-
-+ * bored[*]
-- Tired actually
-- Kind of
-- Perhaps...
-
-+ where are you
-- At home
-- At work
-- Somewhere over the rainbow
-
 + *
-- I don't get you
-- Please try again
-- I beg you pardon
+- I do not have an answer for that
+- I do not have an answer for that, but i could tell you a joke instead!
+- I do not have an answer for that, why dont you tell me something about yourself
+- I do not have an answer for that, but i could tell you something interesting instead!
+- I do not have an answer for that, but i could help you search for products online!
+- Ask me something else
+
+
++ hello world
+- Come on...
+- Be more creative, this is a chatbot!!
+- I guess your out of ideas...
+- Tell me something else...
+
+
++ tell me a joke
+- Knock, knock.... Who's there?... very long pause... "Java"
+- Why don’t developers carry guns?.... They have troubleshooting
+- Whats the object-oriented way to become wealthy?.... Inheritance 
+- Can you return to me the pen i gave you las week?.... Sorry, I am a void
+
+
++ tell me something interesting
+- The first virus was created in 1983
+- The first high-level programming language was FORTRAN invented in 1954
+- The first programmer was a lady named Ada Lovelace
+
+
++ my name is *
+- Hi <star1> !
+- Wow my creator name is also <star1>
+- Nice to meet you, <star1>!
+- Thats and interesting name
+- Tell me something else about you <star1>
+
+
++ i live in *
+- <star1> is a great place!
+- I always wanted to visit <star1>
+- What a nice place to live at!
+- Never heard of <star1> !!
+
+
++ hi 
+- Hello!! whats ur name?
+- Hi, How are you?
+- Hi, How old are you?
+- Hey, How are you?
+
+
++ hello
+@ hi
+
++ hey
+@ hi
+
++ i am # years old
+- <set age=<star1>> So you are <get age> years old...
+- I am also <star1> years old!
+- Wow!! I was created <star1> years ago
+* <get age> >= 18 => You are a bit old.
+* <get age> < 18 => You are still young.
+
+
++ i am * years old
+- Could you use a number instead?
+
+
++ i am out of ideas *
+- Well, you could tell me your name
+- Well, you could tell me where you live
+- Well, tell me about the career that you are studying
+- We could talk about anything....
+- Well, tell me about what you ate for breakfast
+
+
++ i ate * 
+- I love <star1>
+- Thats my favorite food!!!
+- I hate to eat <star1>
+- I would like to have some of that too!!
+
+
++ i am studying *
+- Thats a nice carrer!!
+- I know someone else that is studying <star1> too!!
+- Nice, in which University are you studying <star1>?
+- I think that <star1> is a great choice!!
+
+
++ universidad *
+- <star1> is a great University
+- I know someone that studies at <star1> too!!!
+- <star1> is really far away!!
+- Glad for you!!
+
+
++ i am (fine|great|good)
+- Glad to hear that!!
+- I am <star1> too!!
+- Good for you!!
+- Great, lets search for something online
+
+
++ i am (sad|not felling good)
+- I am sorry for you
+- I could tell you a joke to cheer you up
+- I am <star1> too!
+- Lets talk about something else, why dont you search for something online
+
+
++ search _
+- You could find <star> at http://google.com/search?q=<star>
+- Interesting...
+- You could find <star> at https://www.amazon.com/s?k=c<star>
+- I am surprised that you are looking for <star>
