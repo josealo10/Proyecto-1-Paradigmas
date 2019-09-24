@@ -32,7 +32,7 @@
                             <div class="chat_people">
                                 <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
                                 <div class="chat_ib">
-                                    <h5>Bot chat <span class="chat_date">Sep 24</span></h5>
+                                    <h5>Bot chat <span class="chat_date"><%= date() %></span></h5>
                                     <p id=l ast_message></p>
                                 </div>
                             </div>
@@ -85,7 +85,7 @@
             outgoin_msg.appendChild(sent_msg)
             msg_history.appendChild(outgoin_msg)
 
-            //last_message.textContent = message.value
+            //last_message.innerText = message.value
             //message.value = ""
 
             reciveMessage()
@@ -139,7 +139,28 @@
         })
 
 
+
     }
 </script>
 
 </html>
+<%
+function date(){
+    let date = new Date()
+    switch(date.getMonth()){
+        case 0 : return "Jan " + date.getDate()
+        case 1 : return "Feb "+ date.getDate()
+        case 2 : return "Mar "+ date.getDate()
+        case 3 : return "Apr "+ date.getDate()
+        case 4 : return "May "+ date.getDate()
+        case 5 : return "Jun "+ date.getDate()
+        case 6 : return "Jul "+ date.getDate()
+        case 7 : return "Aug "+ date.getDate()
+        case 8 : return "Sep "+ date.getDate()
+        case 9 : return "Oct "+ date.getDate()
+        case 10 : return "Nov "+ date.getDate()
+        case 11 : return "Dec "+ date.getDate()
+    }
+}
+
+%>
