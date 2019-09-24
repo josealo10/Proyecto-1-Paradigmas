@@ -132,7 +132,7 @@
             incoming_msg.appendChild(incoming_msg_img)
             incoming_msg.appendChild(received_msg)
             msg_history.appendChild(incoming_msg)
-
+            msg_history.scrollTo(0,msg_history.scrollHeight)
             //last_message.textContent = message
 
             document.getElementById("write_msg").value = ""
