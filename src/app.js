@@ -59,7 +59,7 @@ function reply(msg, cb) {
     bot.reply(username, msg.msg).then((resp) => {
         console.log("The bot says: " + resp)
         cb(resp)
-    });
+    })
 }
 
 // static files
@@ -68,4 +68,4 @@ app.use(express.static(path.join(__dirname)))
 // starting the server
 app.listen(app.get("port"), () => {
     console.log(`Server on port ${app.get("port")}`)
-});
+})
