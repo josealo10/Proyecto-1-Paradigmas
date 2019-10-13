@@ -3,59 +3,41 @@
 
 <head>
     <meta charset="UTF-8">
-        <title>Chat Bot</title>
-        <link href="css/chat.css" type="text/css" rel="stylesheet">
+        <title>Login</title>
         <link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css">
         <link type="text/css" rel="stylesheet" href="/css/jquery.dataTables.min.css">
         
 </head>
 
-<body style="background-image: url('images/background.png'); background-size: 100%; background-repeat: repeat-y;">
-   
-    <div class="container">
-        <h3 class=" text-center">Chat Bot</h3>
-        <div class="messaging">
-            <div class="inbox_msg" style="background-color: white">
-                <div class="inbox_people">
-                    <div class="headind_srch">
-                        <div class="recent_heading">
-                            <h4>Recent</h4>
-                        </div>
-                        <div class="srch_bar">
-                            <div class="stylish-input-group">
-                                <input type="text" class="search-bar" placeholder="Search">
-                                <span class="input-group-addon">
-                                    <button type="button"> <i class="fa fa-search" aria-hidden="true"></i> </button>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="inbox_chat">
-                        <div class="chat_list active_chat">
-                            <div class="chat_people">
-                                <div class="chat_img"> <img src="images/user-profile.png" alt="sunil"> </div>
-                                <div class="chat_ib">
-                                    <h5>Bot chat <span class="chat_date"></span></h5>
-                                    <p id=l ast_message></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="mesgs">
-                    <div class="msg_history" id="msg_history">
-                    </div>
-                    <div class="type_msg">
-                        <div class="input_msg_write">
-                            <input type="text" class="write_msg" placeholder="Type a message" id="write_msg" />
-                            <button class="msg_send_btn" type="button" onclick="sendMessage()"><img src="images/enviar.png" ><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script type="text/javascript" src="/js/chat.js"></script>
+<body style="background-image: url('images/background.png'); 
+background-size: 100%; background-repeat: 
+repeat-y;
+display: flex;
+justify-content: center;
+align-items: center;
+vertical-align: middle;
+position: relative;">
+    
+    <div class="w-50" style="position: absolute;
+    top: 50%;
+    margin-top: 100px;" >
+            <form class="px-4 py-3">
+              <div class="form-group">
+                <label>Email address</label>
+                <input type="email" class="form-control" placeholder="email">
+              </div>
+              <div class="form-group">
+                <label>Password</label>
+                <input type="password" class="form-control" placeholder="Password">
+              </div>
+              <div style="text-align: center;">
+              <button type="button" class="btn btn-primary btn-lg" onclick="login()">Sign in</button>
+              </div>    
+            </form>
+          </div>
+
+    
+    <script type="text/javascript" src="/js/login.js"></script>
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="js/popper.min.js"></script>
