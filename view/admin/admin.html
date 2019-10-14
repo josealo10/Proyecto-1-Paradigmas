@@ -24,6 +24,9 @@
       <li class="nav-item">
         <a class="nav-link " href="/" >Login</a>
       </li>
+      <li class="nav-item">
+          <a class="nav-link " data-toggle="modal" data-target="#exampleModalCenter" >About</a>
+        </li>
     </ul>
   </div>
 </header>
@@ -39,6 +42,36 @@
                   <button class="btn btn-success" type="button" id="enviar" onclick="enviar()">Button</button>
                 </div>
               </div>
+        <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">Aoaut</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Universidad Nacional de Costa Rica<br>
+            Curso: Paradigmas de programacion<br>
+            Profesor: Carlos Loria Saenz<br>
+            Proyecto:
+          </p>
+            <p>
+            Equipo desarrollador:<br>
+            Jose Alonso Alfaro Perez<br>
+            Alessandro Fazio Perez<br>
+            Sheng <br>
+            Dnny <br>
+          </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
     
     <script type="text/javascript" src="../js/admin.js"></script>
     <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>

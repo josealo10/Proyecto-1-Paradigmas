@@ -102,5 +102,26 @@ function onMessage(evt){
     document.getElementById("write_msg").value = ""
 }
 
+//Actualiza la hora
+(function(){
+    var actualizarHora = function(){
+        let fecha = new Date()
+        let hora = fecha.getHours()
+        let minutos = fecha.getMinutes()
+        let segundos = fecha.getSeconds()
+        
+        let pHora = document.getElementById("hora")
+        let pMinutos = document.getElementById("minutos")
+        let pSegundos = document.getElementById("segundos")
+
+        pHora.textContent = hora
+        pMinutos.textContent = minutos
+        pSegundos.textContent = segundos
+    }
+
+    actualizarHora
+    var intervalo = setInterval(actualizarHora,1000)
+}())
+
 
 
