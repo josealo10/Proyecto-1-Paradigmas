@@ -19,7 +19,7 @@ http:location(js,images, []).
 :- initialization
       http_server(http_dispatch, [port(9001)]). 
 
-isUser(_{username:X, password:Y}, _{response:N}) :-
+isUser(_{username:X, password:Y}, _{user:N}) :-
     %user(X,Y),
     N = X.
 
