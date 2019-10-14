@@ -7,7 +7,7 @@
 
 % levanta el index.html que esta en la carpeta
 :- http_handler(root(.), http_reply_from_files('.', []), [prefix]).
-:- http_handler('/login', handle_request, []).
+:- http_handler('/login', handle_request_login, []).
 :- http_handler('/admin', handle_request_Admin, []).
 
 % referencia a las carpetas css, js e images
@@ -19,18 +19,21 @@ http:location(js,images, []).
 :- initialization
       http_server(http_dispatch, [port(9001)]). 
 
-solve(_{a:X, b:Y}, _{answer:N}) :-
-    number(X),
-    number(Y),
-    N is X + Y.
+isUser(_{username:X, password:Y}, _{response:N}) :-
+    %user(X,Y),
+    N = X.
 
 % controla los request
-handle_request(Request) :-
+handle_request_login(Request) :-
     http_read_json_dict(Request, Query),
-    solve(Query, Solution),
+    isUser(Query, Solution),
     reply_json_dict(Solution).
 
 handle_request_Admin(Request) :-
       member(method(post),Request),!,
       http_read_data(Request,Data,[codes]),
       writeln(Data).
+
+
+user(chat,111).
+user(admin,222).

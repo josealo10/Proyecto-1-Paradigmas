@@ -1,4 +1,6 @@
 
+var file
+
 function seleccionarRuta(){
     let archivoInput = document.getElementById('archivo').files[0]    
     alert(archivoInput.name)
