@@ -18,7 +18,10 @@ function login(){
             {
                 routes(data.user)
             }
-        }
+        },
+        error: function(){
+            alert("Usuario o contrasena incorrectas")
+        } 
  
     })
     

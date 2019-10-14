@@ -19,9 +19,13 @@ http:location(js,images, []).
 :- initialization
       http_server(http_dispatch, [port(9001)]). 
 
+res(ok).
+	  
 isUser(_{username:X, password:Y}, _{user:N}) :-
     %user(X,Y),
     N = X.
+	
+response(_{response:N}):-res(N).
 
 % controla los request
 handle_request_login(Request) :-
@@ -30,9 +34,8 @@ handle_request_login(Request) :-
     reply_json_dict(Solution).
 
 handle_request_Admin(Request) :-
-      member(method(post),Request),!,
-      http_read_data(Request,Data,[codes]),
-      writeln(Data).
+	  response(Solution),
+	  reply_json_dict(Solution).
 
 
 user(chat,111).
