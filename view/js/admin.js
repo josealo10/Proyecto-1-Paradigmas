@@ -1,6 +1,6 @@
 
 let flag = false
-
+const fs = require('fs')
 function seleccionarRuta(){
     let file = document.getElementById('archivo').files[0]    
     let lable = document.getElementById("lable")
@@ -18,7 +18,14 @@ function enviar(){
         var formData = new FormData()
         formData.append("rive",file)
 
-
+        
+        fs.appendFile('ducumento.txt','probando',(error)=>{
+            if(error){
+                throw error
+            }
+            alert("se creo")
+        })
+        /*
         $.ajax({
             url: "http://localhost:9001/admin",
             type: "post",
@@ -35,6 +42,7 @@ function enviar(){
                     }
                 }
         })
+        */
     }
     
 }

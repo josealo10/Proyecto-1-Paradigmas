@@ -1,0 +1,5 @@
++ a * _ #
+- Case a: star1=<star1> | underscore=<star2>  | hash=<star3> |
+
++ b * *
+- Case b: star1=<star1> | star2=<star2> |

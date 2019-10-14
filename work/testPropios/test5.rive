@@ -1,0 +1,2 @@
++ your name is *
+- <set botname=<star>> My name will be <get botname> from now on!!

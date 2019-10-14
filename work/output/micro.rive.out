@@ -1,0 +1,22 @@
+// *** Rive Program *** : Generated at: 14/10/19 14:51:42 
+
+// >>> Trigger Block 
++ i say * 
+
+// >>> Response Block 
+- Dont say < star > { weight = 20 } 
+
+// >>> Trigger Block 
++ hello world 
+
+// >>> Response Block 
+- Come on . . . 
+
+// >>> Response Block 
+- Be more creative , this is a chatbot ! ! 
+
+// >>> Response Block 
+- I guess your out of ideas . . . 
+
+// >>> Response Block 
+- Tell me something else . . . 

@@ -1,0 +1,12 @@
+
+
++ <set x =   hola>
+
+
++ hello2 * <input> (a|b) (@colors) <input2> # _ {weight = 2} # * 666 
+
+! version = 10
+! var x = 666
+! global debug = true
+
+
