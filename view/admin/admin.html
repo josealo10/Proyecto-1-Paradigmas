@@ -1,97 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link type="text/css" rel="stylesheet" href="../css/bootstrap.min.css">
     <link type="text/css" rel="stylesheet" href="../css/jquery.dataTables.min.css">
     <title>Admin</title>
 </head>
+
 <body style="background-image: url('../images/background.png');
  background-size: 100%; 
- background-repeat: repeat-y;"
- >
- <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar d-block">
-    <div class="navbar-nav-scroll">
-      <ul class="navbar-nav bd-navbar-nav flex-row">
-        <li class="nav-item">
-          <a class="nav-link " href="/" >Login</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link " data-toggle="modal" data-target="#exampleModalCenter" >About</a>
-          </li>
-      </ul>
-    </div>
-  </header>
-<table class="w-100" style="margin-top: 5%;">
-  <tr>
-    <td>
-        <div class="input-group w-50"  style=" margin-left: 25%;">
-          <div class="custom-file">
-            <input type="file" class="custom-file-input" id="archivo" aria-describedby="inputGroupFileAddon04" onchange="seleccionarRuta()">
-              <label class="custom-file-label" for="archivo">Choose file</label>
-          </div>
-          <div style="margin-left: 4%;">
-            <button class="btn btn-success" type="button" id="enviar" onclick="enviar()">Evaluar</button>
-          </div>
-        </div> 
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <div class="form-group w-50" style=" margin-left: 25%; margin-top: 3%;">
-          <textarea class="form-control rounded-0" id="exampleFormControlTextarea1" rows="10"></textarea>
-      </div>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <div style=" margin-left: 25%; margin-right: 25%;; ">
-        <button type="button" class="btn btn-primary btn-lg btn-block" >Evaluar</button>
-      </div>
-    </td>
-  </tr>
-
-</table>
-
-      
-          
-           
-        
-        <!-- Modal -->
-  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalCenterTitle">About</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <p>Universidad Nacional de Costa Rica<br>
-            Curso: Paradigmas de programacion<br>
-            Profesor: Carlos Loria Saenz<br>
-            Proyecto:
-          </p>
-            <p>
-            Equipo desarrollador:<br>
-            Jose Alonso Alfaro Perez<br>
-            Alessandro Fazio Perez<br>
-            Sheng <br>
-            Dnny <br>
-          </p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-          </div>
+ background-repeat: repeat-y;">
+    <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar d-block">
+        <div class="navbar-nav-scroll">
+            <ul class="navbar-nav bd-navbar-nav flex-row">
+                <li class="nav-item">
+                    <a class="nav-link " href="/">Logout</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModalCenter">About</a>
+                </li>
+            </ul>
         </div>
-      </div>
+    </header>
+    <table class="w-100" style="margin-top: 5%;">
+        <tr>
+            <td>
+                <div class="input-group w-50" style=" margin-left: 25%;">
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="archivo" aria-describedby="inputGroupFileAddon04" onchange="seleccionarRuta()">
+                        <label class="custom-file-label" for="archivo">Choose file</label>
+                    </div>
+                    <div style="margin-left: 4%;">
+                        <button class="btn btn-success" type="button" id="enviar" onclick="enviar()">Evaluar</button>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="form-group w-50" style=" margin-left: 25%; margin-top: 3%;">
+                    <textarea class="form-control rounded-0" id="exampleFormControlTextarea1" rows="10"></textarea>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div style=" margin-left: 25%; margin-right: 25%;; ">
+                    <button type="button" class="btn btn-primary btn-lg btn-block">Evaluar</button>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">About</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+                </div>
+                <div class="modal-body">
+                    <p><b>Universidad Nacional de Costa Rica</b><br> <b>Curso:</b> Paradigmas de programación<br> <b>Profesor:</b> Carlos Loría Sáenz<br> <b>Proyecto:</b> Chat Bot
+                    </p>
+                    <p>
+                        <b>Desarrolladores:</b><br> Jose Alonso Alfaro Pérez<br> Alessandro Fazio Pérez<br> Sheng Yuan Lin<br> Danny Gómez Chaves<br>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
     </div>
-    
+
     <script type="text/javascript" src="../js/admin.js"></script>
     <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="../js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="../js/popper.min.js"></script>
     <script type="text/javascript" src="../js/bootstrap.min.js"></script>
 </body>
+
 </html>
