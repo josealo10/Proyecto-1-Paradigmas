@@ -1,9 +1,13 @@
+:- use_module(['src/rs.compile/rsCompiler'])
+
 :- use_module(library(http/thread_httpd)).
 :- use_module(library(http/http_dispatch)).
 :- use_module(library(http/http_json)).
 :- use_module(library(http/http_files)).
 :- use_module(library(http/http_path)).
 :- use_module(library(http/html_write)).
+:- use_module(library(http/http_client)).
+:- use_module(library(http/http_parameters)).
 
 % levanta el index.html que esta en la carpeta
 :- http_handler(root(.), http_reply_from_files('.', []), [prefix]).
@@ -34,8 +38,12 @@ handle_request_login(Request) :-
     reply_json_dict(Solution).
 
 handle_request_Admin(Request) :-
-	  response(Solution),
-	  reply_json_dict(Solution).
+	member(method(post), Request), !,
+	%http_parameters(Request, [ fname(Name, [])  ]),
+    http_read_data(Request, Data, [to(string)]),
+	format('Content-type: text/plain~n~n'),
+	response(Solution),
+	reply_json_dict(Solution).
 
 
 user(chat,111).

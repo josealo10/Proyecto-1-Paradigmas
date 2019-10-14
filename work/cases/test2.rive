@@ -1,0 +1,6 @@
++ i am # years old
+* <get age> >= 18 => You are a bit old.
+* <get age> < 18 => You are still young.
+- <set age=<formal>> So you are <get age> years old...
+- I am also <star1> years old!
+- Wow!! I was created <get age> years ago
