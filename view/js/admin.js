@@ -8,8 +8,8 @@ function seleccionarRuta(){
     flag = true
 }
 
-function respuesta(res){
-    aler(res)
+function respuesta(res) {
+    alert(res)
 }
 
 function enviar(){
